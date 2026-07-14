@@ -1537,6 +1537,20 @@ margin-top:40px;
         justify-content: center;
         width: 100%;
     }
+
+    .nav-menu {
+        display: none; /* Սա փակում է մենյուն */
+        flex-direction: column;
+        width: 100%;
+        background: #333;
+    }
+    .nav-menu.active {
+        display: flex; /* Սա բացում է մենյուն */
+    }
+    .menu-toggle {
+        display: block; /* Կոճակը հայտնվում է */
+        cursor: pointer;
+    }
 }
 
 /* Խաղերի ցանցի (grid) ադապտացիա */
@@ -1614,21 +1628,7 @@ html, body {
     cursor: pointer;
 }
 
-@media (max-width: 768px) {
-    .menu-toggle { display: block; }
-    
-    .nav-menu {
-        display: none; /* Մենյուն փակ է */
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background: #1a1a1a;
-        padding: 20px;
-    }
-    
-    .nav-menu.active {
-        display: flex; /* Մենյուն բացվում է այս կլասով */
-    }
-}
+
+
+
+/* Թաքցնում ենք մենյուն հեռախոսով */
