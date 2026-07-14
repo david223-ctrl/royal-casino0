@@ -1561,5 +1561,45 @@ margin-top:40px;
 /* Ընդհանուր նկարների հարմարեցում */
 img {
     max-width: 100%;
-    height: auto;
+    display: block;
 }
+/* --- IOS-Ի ՀԱՄԱՐ ԱՊԱՀՈՎՈՒՄ --- */
+
+/* 1. Հեռացնում ենք հորիզոնական սքրոլը (որպեսզի էկրանը չշարժվի) */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* 2. Մոբայլի համար հարմարեցված սյուներ */
+@media (max-width: 600px) {
+    .game-grid {
+        grid-template-columns: 1fr !important; /* 1 սյուն */
+        gap: 15px !important;
+        padding: 10px !important;
+    }
+
+    /* 3. Սեղմելի տարրերի չափերի մեծացում */
+    button, .play-btn, .nav a {
+        min-height: 44px; /* Apple-ի ստանդարտը հպումների համար */
+        padding: 12px 20px;
+    }
+
+    /* 4. Ֆոնտի չափի ավտոմատ կարգավորում */
+    body {
+        font-size: 16px; /* Սա կանխում է Safari-ի ավտոմատ զումը */
+    }
+}
+
+/* 5. Կայքի հիմնական կոնտեյները */
+.container, .main-container {
+    width: 100%;
+    max-width: 100vw;
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
