@@ -1602,4 +1602,33 @@ html, body {
     padding-right: 10px;
 }
 
+/* Սկզբից թաքցնում ենք մենյուն հեռախոսների համար */
+.nav-menu {
+    display: flex;
+    gap: 20px;
+}
 
+.menu-toggle {
+    display: none; /* Կոճակը երևում է միայն հեռախոսով */
+    font-size: 30px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle { display: block; }
+    
+    .nav-menu {
+        display: none; /* Մենյուն փակ է */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #1a1a1a;
+        padding: 20px;
+    }
+    
+    .nav-menu.active {
+        display: flex; /* Մենյուն բացվում է այս կլասով */
+    }
+}
