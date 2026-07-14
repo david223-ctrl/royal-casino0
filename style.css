@@ -1540,9 +1540,9 @@ margin-top:40px;
 
     .nav-menu {
         display: none; /* Սա փակում է մենյուն */
-        flex-direction: column;
-        width: 100%;
-        background: #333;
+       
+     
+      
     }
     .nav-menu.active {
         display: flex; /* Սա բացում է մենյուն */
