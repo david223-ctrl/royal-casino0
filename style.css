@@ -1,0 +1,1525 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#05070d;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* ================= HEADER ================= */
+
+header{
+    width:100%;
+    height:80px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 80px;
+
+    position:fixed;
+    top:0;
+    left:0;
+
+    background:rgba(0,0,0,.55);
+
+    backdrop-filter:blur(15px);
+
+    border-bottom:1px solid rgba(0,170,255,.15);
+
+    z-index:1000;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    font-size:26px;
+    font-weight:700;
+}
+
+.logo i{
+    color:#00aaff;
+    font-size:32px;
+}
+
+nav{
+    display:flex;
+    gap:35px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#00aaff;
+}
+
+.buttons{
+    display:flex;
+    gap:15px;
+}
+
+button{
+    cursor:pointer;
+    transition:.35s;
+}
+
+.login{
+
+    width:120px;
+    height:45px;
+
+    background:transparent;
+    border:2px solid #00aaff;
+    color:white;
+    border-radius:12px;
+}
+
+.login:hover{
+
+    background:#00aaff;
+    box-shadow:0 0 20px #00aaff;
+}
+
+.signup{
+
+    width:150px;
+    height:45px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:linear-gradient(90deg,#008cff,#00d4ff);
+
+    color:white;
+
+    font-weight:600;
+
+    box-shadow:0 0 30px rgba(0,170,255,.5);
+}
+
+.signup:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 0 45px #00aaff;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+
+    width:100%;
+    min-height:100vh;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:150px 80px;
+}
+
+.hero-left{
+
+    width:48%;
+}
+
+.hero-left h4{
+
+    color:#00aaff;
+
+    margin-bottom:15px;
+
+    font-size:22px;
+}
+
+.hero-left h1{
+
+    font-size:68px;
+
+    line-height:1.1;
+
+    margin-bottom:25px;
+}
+
+.hero-left p{
+
+    color:#a8b0c3;
+
+    line-height:1.8;
+
+    font-size:18px;
+
+    margin-bottom:40px;
+}
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:20px;
+}
+
+.play{
+
+    width:200px;
+    height:60px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:#00aaff;
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    box-shadow:0 0 35px rgba(0,170,255,.6);
+}
+
+.play:hover{
+
+    transform:translateY(-5px);
+}
+
+.bonus{
+
+    width:220px;
+    height:60px;
+
+    background:transparent;
+
+    border:2px solid #00aaff;
+
+    color:white;
+
+    border-radius:14px;
+
+    font-size:18px;
+}
+
+.bonus:hover{
+
+    background:#00aaff;
+
+    box-shadow:0 0 35px #00aaff;
+}
+
+/* ================= RIGHT ================= */
+
+.hero-right{
+
+    width:45%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    position:relative;
+}
+
+.roulette{
+
+    width:350px;
+    height:350px;
+
+    border-radius:50%;
+
+    background:#101827;
+
+    border:5px solid #00aaff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:120px;
+
+    color:#00aaff;
+
+    box-shadow:
+    0 0 40px #00aaff,
+    inset 0 0 30px #00aaff;
+
+    animation:spin 12s linear infinite;
+}
+
+.roulette-glow{
+
+    position:absolute;
+
+    width:500px;
+    height:500px;
+
+    background:#00aaff;
+
+    filter:blur(180px);
+
+    opacity:.18;
+}
+
+@keyframes spin{
+
+from{
+
+transform:rotate(0deg);
+
+}
+
+to{
+
+transform:rotate(360deg);
+
+}
+
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:900px){
+
+header{
+
+padding:20px;
+
+flex-direction:column;
+
+height:auto;
+
+gap:20px;
+
+}
+
+nav{
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
+
+.hero{
+
+flex-direction:column;
+
+text-align:center;
+
+padding:180px 20px 60px;
+
+}
+
+.hero-left,
+.hero-right{
+
+width:100%;
+
+}
+
+.hero-left h1{
+
+font-size:42px;
+
+}
+
+.hero-buttons{
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+}
+
+.roulette{
+
+width:260px;
+height:260px;
+font-size:90px;
+margin-top:40px;
+
+}
+
+}
+
+/* ==========================================================================
+   Стили для секции игр (Royal Casino)
+   ========================================================================== */
+
+/* Общие настройки для всей секции */
+.games {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    font-family: 'Poppins', sans-serif; /* Твой подключенный шрифт */
+}
+
+/* Заголовок "Популярные игры" */
+.games h1 {
+    color: #ffffff;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* СЕТКА ДЛЯ КАРТОЧЕК */
+.game-grid {
+    display: grid;
+    /* Карточки будут автоматически выстраиваться в ряд (минимум 260px каждая) */
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 30px; /* Расстояние между карточками */
+}
+
+/* СТИЛЬ КАРТОЧКИ */
+.game-card {
+    background-color: #1a1a1f; /* Темный фон карточки, чуть светлее фона сайта */
+    border-radius: 16px;       /* Красивые скругленные углы */
+    overflow: hidden;          /* Чтобы картинка не вылезала за скругления */
+    border: 1px solid #2c2c35; /* Элегантная тонкая рамка */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Глубокая тень */
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Эффект при наведении на карточку */
+.game-card:hover {
+    transform: translateY(-8px); /* Карточка плавно приподнимается */
+    border-color: #ffbe0b;       /* Рамка подсвечивается золотым */
+    box-shadow: 0 15px 30px rgba(255, 190, 11, 0.2); /* Золотистое свечение */
+}
+
+/* КАРТИНКА ВНУТРИ КАРТОЧКИ */
+.game-card img {
+    width: 100%;
+    height: 220px;       /* Фиксированная высота для всех картинок */
+    object-fit: cover;   /* Картинки масштабируются без искажения пропорций */
+    transition: transform 0.3s ease;
+}
+
+/* Эффект увеличения картинки при наведении */
+.game-card:hover img {
+    transform: scale(1.05);
+}
+
+/* НАЗВАНИЕ ИГРЫ (h3) */
+.game-card h3 {
+    color: #ffffff;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 20px 15px 10px 15px;
+    text-align: left;
+}
+
+/* КНОПКА "ПОДРОБНЕЕ" */
+.game-card button {
+    background: #ffbe0b; /* Золотой цвет кнопки */
+    color: #000000;      /* Черный текст */
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 12px;
+    margin: 0 15px 20px 15px; /* Отступы по бокам и снизу */
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+/* Эффект при наведении на кнопку */
+.game-card button:hover {
+    background: #fb5607; /* Меняет цвет на сочный оранжевый */
+    color: #ffffff;      /* Текст становится белым */
+}
+
+/* Эффект при клике */
+.game-card button:active {
+    transform: scale(0.98);
+}
+
+/* ==========================================================================
+   Спец-стили для страницы VIP (Черно-Голубой Неон)
+   ========================================================================== */
+
+/* Контейнер заголовка VIP */
+.vip-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+/* Главная голубая плашка Premium */
+.vip-badge-main {
+    background: linear-gradient(135deg, #00b4d8 0%, #0077b6 100%);
+    color: #ffffff;
+    padding: 5px 12px;
+    font-size: 0.85rem;
+    font-weight: 800;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 0 15px rgba(0, 180, 216, 0.4);
+}
+
+/* Премиум-стиль для VIP-карточки (Черный + Голубой неоновый контур) */
+.game-card.vip-card {
+    background: #0d0d11; /* Глубокий черный фон */
+    border: 1px solid #00b4d8; /* Голубая неоновая рамка */
+    box-shadow: 0 10px 25px rgba(0, 180, 216, 0.1);
+}
+
+/* Эффект при наведении на VIP-карточку */
+.game-card.vip-card:hover {
+    border-color: #90e0ef; /* Светло-голубое свечение */
+    box-shadow: 0 15px 35px rgba(0, 180, 216, 0.4); 
+    transform: translateY(-10px);
+}
+
+/* Обертка для картинки */
+.game-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+}
+
+/* Голубой ярлык "VIP" поверх картинки */
+.vip-tag {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #00b4d8;
+    color: #ffffff;
+    font-weight: 900;
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border-radius: 6px;
+    z-index: 2;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+/* Изменяем текст внутри VIP-инфо */
+.game-card.vip-card .game-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Стильная темная кнопка с голубой рамкой и текстом */
+.game-card.vip-card button {
+    background: #0d0d11;
+    color: #00b4d8;
+    border: 1px solid #00b4d8;
+    margin: 10px 0 0 0;
+    padding: 12px 0;
+    width: 100%;
+    font-weight: 700;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* При наведении кнопка полностью заливается голубым */
+.game-card.vip-card button:hover {
+    background: linear-gradient(135deg, #00b4d8 0%, #0077b6 100%);
+    color: #ffffff;
+    border-color: transparent;
+    box-shadow: 0 0 15px rgba(0, 180, 216, 0.6);
+}
+
+/* Общие настройки для всей секции игр */
+.games {
+    max-width: 1200px;
+    margin: 0 auto 40px auto; /* Убрали верхний маржин */
+    padding: 120px 20px 0 20px; /* ДОБАВИЛИ 120px СВЕРХУ, чтобы отодвинуть от меню */
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ==========================================================================
+   Спец-стили для страницы Контактов (Черно-Голубой Неон)
+   ========================================================================== */
+
+/* Главная секция контактов с отступом от фиксированного меню */
+.contacts-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 120px 20px 40px 20px; /* Отступ сверху 120px, чтобы не пряталось под меню */
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+.contacts-container h1 {
+    color: #ffffff;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.contacts-subtitle {
+    color: #8a8a98;
+    font-size: 1.1rem;
+    margin-bottom: 50px;
+}
+
+/* Сетка для контактных карточек */
+.contacts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* Стиль карточки контакта */
+.contact-card {
+    background: #0d0d11; /* Твой глубокий черный цвет */
+    border: 1px solid #00b4d8; /* Твой голубой неон */
+    border-radius: 16px;
+    padding: 40px 20px;
+    box-shadow: 0 10px 25px rgba(0, 180, 216, 0.1);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Эффект при наведении на карточку контакта */
+.contact-card:hover {
+    border-color: #90e0ef;
+    box-shadow: 0 15px 35px rgba(0, 180, 216, 0.3);
+    transform: translateY(-3px); /* Легкий аккуратный подъем без взлета */
+}
+
+/* Иконки FontAwesome внутри карточек */
+.contact-card i {
+    font-size: 3rem;
+    color: #00b4d8; /* Голубой цвет для иконок */
+    margin-bottom: 20px;
+}
+
+/* Заголовки внутри карточек */
+.contact-card h3 {
+    color: #ffffff;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+/* Текст (ссылки/информация) внутри карточек */
+.contact-card p {
+    color: #00b4d8;
+    font-size: 1.1rem;
+    font-weight: 400;
+    word-break: break-all;
+}
+
+/* ==========================================================================
+   Дополнительные стили для блока игр на Главной странице
+   ========================================================================== */
+
+/* Контейнер для заголовка и кнопки "Смотреть все" */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+/* Убираем лишний нижний отступ у H1 внутри этого контейнера */
+.section-header h1 {
+    margin-bottom: 0 !important;
+}
+
+/* Красивая голубая кнопка "Смотреть все" */
+.see-all-btn {
+    color: #00b4d8;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    border: 1px solid #00b4d8;
+    padding: 8px 18px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+/* Эффект при наведении на "Смотреть все" */
+.see-all-btn:hover {
+    background: #00b4d8;
+    color: #ffffff;
+    box-shadow: 0 0 15px rgba(0, 180, 216, 0.4);
+}
+
+/* ==========================================================================
+   Новые разделы для Главной страницы (Джекпот, Плюсы, FAQ, Футер)
+   ========================================================================== */
+
+/* Общий стиль заголовков для секций */
+.section-title {
+    color: #ffffff;
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+}
+
+/* --- 1. СТИЛИ ДЛЯ ДЖЕКПОТА --- */
+.jackpot-section {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.jackpot-container {
+    background: linear-gradient(135deg, #0d0d11 0%, #001d29 100%);
+    border: 2px solid #00b4d8;
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(0, 180, 216, 0.25);
+}
+
+.jackpot-container h2 {
+    color: #90e0ef;
+    font-size: 1.5rem;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+}
+
+.jackpot-amount {
+    color: #ffffff;
+    font-size: 3.5rem;
+    font-weight: 800;
+    text-shadow: 0 0 20px rgba(0, 180, 216, 0.6);
+    margin-bottom: 10px;
+}
+
+.jackpot-amount .cents {
+    color: #00b4d8;
+    font-size: 2rem;
+    vertical-align: super;
+}
+
+.jackpot-container p {
+    color: #8a8a98;
+    font-size: 1.1rem;
+}
+
+/* --- 2. СТИЛИ ДЛЯ ПРЕИМУЩЕСТВ --- */
+.features-section {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 20px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.feature-card {
+    background: #0d0d11;
+    border: 1px solid #22222a;
+    border-radius: 16px;
+    padding: 40px 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    border-color: #00b4d8;
+    box-shadow: 0 10px 25px rgba(0, 180, 216, 0.15);
+    transform: translateY(-3px);
+}
+
+.feature-card i {
+    font-size: 2.5rem;
+    color: #00b4d8;
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    color: #ffffff;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    color: #8a8a98;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* --- 3. СТИЛИ ДЛЯ FAQ --- */
+.faq-section {
+    max-width: 800px;
+    margin: 80px auto;
+    padding: 0 20px;
+}
+
+.faq-item {
+    background: #0d0d11;
+    border: 1px solid #22222a;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    padding: 20px;
+    text-align: left;
+}
+
+.faq-question {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.faq-question::before {
+    content: "•";
+    color: #00b4d8;
+    font-size: 1.5rem;
+    position: absolute;
+    left: 5px;
+    top: -4px;
+}
+
+.faq-answer {
+    color: #8a8a98;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    padding-left: 25px;
+}
+
+/* --- 4. СТИЛИ ДЛЯ ФУТЕРА --- */
+.main-footer {
+    background: #07070a;
+    border-top: 1px solid #14141a;
+    padding: 30px 20px;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.footer-content p {
+    color: #555562;
+    font-size: 0.9rem;
+}
+
+/* ==========================================================================
+   ИГРОВЫЕ КАРТОЧКИ — ТОЛЬКО ЧЕРНЫЙ И ГОЛУБОЙ ЦВЕТ
+   ========================================================================== */
+
+/* Сетка для карточек */
+.game-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)) !important;
+    gap: 25px !important;
+    margin-top: 20px !important;
+}
+
+/* Сама карточка */
+.game-card {
+    background-color: #0d0d11 !important; /* Глубокий черный фон */
+    border: 1px solid #1e1e24 !important; /* Темная рамка */
+    border-radius: 16px !important;
+    overflow: hidden !important;
+    display: flex !important;
+    flex-direction: column !important;
+    transition: all 0.3s ease !important;
+}
+
+/* Эффект при наведении на карточку — подсвечивается ГОЛУБЫМ */
+.game-card:hover {
+    border-color: #00b4d8 !important;
+    box-shadow: 0 10px 25px rgba(0, 180, 216, 0.25) !important;
+    transform: translateY(-3px) !important;
+}
+
+/* Картинка внутри карточки */
+.game-card img {
+    width: 100% !important;
+    height: 200px !important;
+    object-fit: cover !important;
+}
+
+/* Заголовок игры */
+.game-card h3 {
+    color: #ffffff !important;
+    font-size: 1.2rem !important;
+    margin: 15px !important;
+    font-weight: 600 !important;
+}
+
+/* КНОПКА — СТРОГО ГОЛУБАЯ */
+.game-card button {
+    background-color: #00b4d8 !important; /* Твой фирменный голубой цвет */
+    color: #ffffff !important;            /* Белый текст */
+    border: none !important;
+    border-radius: 12px !important;
+    padding: 12px 20px !important;
+    font-weight: 700 !important;
+    margin: 0 15px 20px 15px !important;
+    cursor: pointer !important;
+    transition: background-color 0.2s ease !important;
+}
+
+/* Эффект при наведении на кнопку */
+.game-card button:hover {
+    background-color: #0077b6 !important; /* Сине-голубой при наведении */
+    color: #ffffff !important;
+}
+
+/* ==========================================================================
+   РАСШИРЕННАЯ СТРАНИЦА ИГР (Сетка + Фильтры + Живые Выигрыши)
+   ========================================================================== */
+
+/* Макет распределения: Каталог слева, Виджет выигрышей справа */
+.games-page-layout {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 120px 20px 40px 20px; /* Отступ сверху от меню */
+    display: flex;
+    gap: 30px;
+}
+
+.games-main-content {
+    flex: 3; /* Занимает 75% ширины */
+}
+
+/* Стили кнопок-фильтров */
+.games-filter-bar {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.filter-btn {
+    background: #0d0d11;
+    color: #8a8a98;
+    border: 1px solid #22222a;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background: #00b4d8;
+    color: #ffffff;
+    border-color: #00b4d8;
+    box-shadow: 0 0 15px rgba(0, 180, 216, 0.3);
+}
+
+/* БОКОВАЯ ПАНЕЛЬ: ЖИВЫЕ ВЫИГРЫШИ */
+.live-wins-sidebar {
+    flex: 1; /* Занимает 25% ширины */
+    background: #0d0d11;
+    border: 1px solid #00b4d8; /* Голубой контур */
+    border-radius: 20px;
+    padding: 25px 20px;
+    height: fit-content;
+    box-shadow: 0 10px 30px rgba(0, 180, 216, 0.1);
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #22222a;
+    padding-bottom: 15px;
+}
+
+.sidebar-header h2 {
+    color: #ffffff;
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+/* Пульсирующая зеленая/голубая точка (эффект Live) */
+.live-pulse {
+    width: 10px;
+    height: 10px;
+    background-color: #00b4d8;
+    border-radius: 50%;
+    box-shadow: 0 0 0 0 rgba(0, 180, 216, 0.7);
+    animation: pulse 1.6s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 180, 216, 0.7); }
+    70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(0, 180, 216, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 180, 216, 0); }
+}
+
+/* Элементы списка выигрышей */
+.wins-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.win-item {
+    background: #14141a;
+    border-radius: 12px;
+    padding: 12px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #1e1e24;
+}
+
+.win-user {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.win-game {
+    color: #8a8a98;
+    font-size: 0.8rem;
+}
+
+.win-amount {
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+.font-cyan {
+    color: #00b4d8;
+    text-shadow: 0 0 10px rgba(0, 180, 216, 0.3);
+}
+
+/* Адаптивность для мобилок (чтобы сайдбар уходил вниз, если экран узкий) */
+@media (max-width: 992px) {
+    .games-page-layout {
+        flex-direction: column;
+    }
+    .live-wins-sidebar {
+        width: 100%;
+    }
+}
+
+/* ==========================================================================
+   ФИКС VIP СТРАНИЦЫ (Ровные карточки)
+   ========================================================================== */
+
+   .vip-page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 120px 20px 40px 20px;
+}
+
+/* Стили для блока статусов (карточек Bronze, Silver и т.д.) */
+.vip-status-container {
+    margin-bottom: 60px;
+}
+
+.status-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.status-card {
+    background: #0d0d11;
+    border: 1px solid #22222a;
+    border-radius: 16px;
+    padding: 25px 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.status-card:hover {
+    border-color: #00b4d8;
+    box-shadow: 0 0 20px rgba(0, 180, 216, 0.2);
+    transform: translateY(-3px);
+}
+
+.status-card h3 {
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+.status-card p {
+    color: #8a8a98;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.status-lock {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 20px;
+    background: #14141a;
+    color: #00b4d8;
+    border: 1px solid #00b4d8;
+    text-transform: uppercase;
+}
+
+/* Оформление VIP карточек — делаем им постоянную неоновую рамку */
+.game-card.vip-card {
+    background: #060608 !important;
+    border: 1px solid #00b4d8 !important; /* Голубой контур */
+    box-shadow: 0 5px 15px rgba(0, 180, 216, 0.15) !important;
+}
+
+.game-card.vip-card:hover {
+    border-color: #90e0ef !important;
+    box-shadow: 0 10px 25px rgba(0, 180, 216, 0.35) !important;
+}
+
+/* Кнопки внутри VIP карточек */
+.game-card.vip-card button {
+    background: transparent !important;
+    color: #00b4d8 !important;
+    border: 1px solid #00b4d8 !important;
+}
+
+.game-card.vip-card button:hover {
+    background: #00b4d8 !important;
+    color: #ffffff !important;
+}
+
+/* КНОПКА — ТЕПЕРЬ СТРОГО ПО ЦЕНТРУ КАРТОЧКИ */
+.game-card button {
+    background-color: #00b4d8 !important; /* Твой фирменный голубой цвет */
+    color: #ffffff !important;            /* Белый текст */
+    border: none !important;
+    border-radius: 12px !important;
+    padding: 12px 20px !important;
+    font-weight: 700 !important;
+    
+    /* ВОТ ЭТИ ТРИ СТРОКИ ВЫРАВНИВАЮТ КНОПКУ ПРЯМО ПО ЦЕНТРУ */
+    display: block !important;
+    margin: 0 auto 20px auto !important; /* auto слева и справа сдвинет её в центр */
+    width: 85% !important;               /* Делает её аккуратной по ширине */
+    
+    cursor: pointer !important;
+    transition: background-color 0.2s ease !important;
+}
+
+/* ==========================================================================
+   МОДАЛЬНЫЕ ОКНА (ВХОД И РЕГИСТРАЦИЯ)
+   ========================================================================== */
+
+/* Задний темный фон при открытии окна */
+.modal {
+    display: none; /* По умолчанию скрыто */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(3, 3, 5, 0.8);
+    backdrop-filter: blur(8px); /* Размытие заднего плана */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Контентная плашка окна */
+.modal-content {
+    background-color: #0d0d11;
+    border: 2px solid #00b4d8; /* Неоново-голубая рамка */
+    box-shadow: 0 0 30px rgba(0, 180, 216, 0.3);
+    padding: 40px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 420px;
+    position: relative;
+    text-align: left;
+    animation: fadeInModal 0.3s ease;
+}
+
+@keyframes fadeInModal {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Кнопка закрытия (крестик) */
+.close-modal {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    color: #8a8a98;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.close-modal:hover {
+    color: #00b4d8;
+}
+
+.modal-content h2 {
+    color: #ffffff;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+/* Поля ввода (Инпуты) */
+.input-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.input-group label {
+    color: #8a8a98;
+    font-size: 0.9rem;
+}
+
+.input-group input {
+    background: #14141a;
+    border: 1px solid #22222a;
+    padding: 14px;
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.2s;
+}
+
+.input-group input:focus {
+    border-color: #00b4d8;
+    box-shadow: 0 0 10px rgba(0, 180, 216, 0.2);
+}
+
+/* Чекбокс 18+ */
+.checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 25px;
+    color: #8a8a98;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    cursor: pointer;
+}
+
+.checkbox-group input {
+    margin-top: 3px;
+    accent-color: #00b4d8;
+}
+
+/* Кнопка отправки внутри модалки */
+.modal-submit-btn {
+    width: 100%;
+    background: #00b4d8;
+    color: #ffffff;
+    border: none;
+    padding: 14px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+
+.modal-submit-btn:hover {
+    background: #0077b6;
+    box-shadow: 0 0 15px rgba(0, 180, 216, 0.4);
+}
+
+/* Ссылка на переключение окон */
+.modal-switch {
+    text-align: center;
+    margin-top: 20px;
+    color: #555562;
+    font-size: 0.9rem;
+}
+
+.modal-switch a {
+    color: #00b4d8;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.modal-switch a:hover {
+    text-decoration: underline;
+}
+
+/* Контейнер страницы (БЕЗ ФОНА) */
+.wheel-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 85vh;
+    padding-top: 80px;
+    font-family: sans-serif;
+}
+
+.wheel-title {
+    color: #fff;
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+    text-shadow: 0 0 15px #0088ff; /* Неоновое свечение */
+}
+
+.wheel-subtitle {
+    color: #aaaaaa;
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+}
+
+.wheel-area {
+    position: relative;
+    width: 350px;
+    height: 350px;
+}
+
+/* Колесо */
+.wheel-wrapper {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 8px solid #0088ff;
+    box-shadow: 0 0 35px rgba(0, 136, 255, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #101627; /* Темный фон самого колеса, чтобы цифры были видны */
+    overflow: hidden;
+    position: relative;
+    transition: transform 4s cubic-bezier(0.15, 0.85, 0.35, 1.02);
+}
+
+/* Центр колеса */
+.wheel-center {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    background: #0088ff;
+    border-radius: 50%;
+    z-index: 5;
+    box-shadow: 0 0 15px #0088ff;
+    border: 3px solid #fff;
+}
+
+/* Стрелка сверху */
+.pointer {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 30px solid #00ffcc; /* Бирюзовая стрелка */
+    z-index: 10;
+}
+
+/* Цифры на колесе */
+.wheel-number {
+    position: absolute;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transform-origin: center 150px;
+    height: 300px;
+    top: 25px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+}
+
+/* Кнопка «Крутить» */
+.spin-btn {
+    margin-top: 40px;
+    background: linear-gradient(135deg, #0088ff, #00ffcc);
+    color: #fff;
+    border: none;
+    padding: 14px 45px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 255, 204, 0.3);
+    transition: all 0.3s ease;
+}
+
+.spin-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(0, 255, 204, 0.7);
+}
+
+.spin-btn:active {
+    transform: scale(0.98);
+}
+
+/* Այս կոդը կփոքրացնի լոգոն ՄԻԱՅՆ այս էջում */
+
+.main-header .logo i {
+    font-size: 1.4rem !important; /* Փոքրացնում է խաղառիկի նշանը */
+}
+
+.main-header .logo h1 {
+    font-size: 1.5rem !important; /* Փոքրացնում է Royal Casino տեքստը */
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #070b19; /* Քո հիմնական սև/մուգ կապույտը */
+    border-bottom: 2px solid #0088ff; /* Կապույտ գիծը */
+}
+
+.main-header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.main-header nav a:hover {
+    color: #0088ff;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #070b19;
+    padding: 30px;
+    border: 1px solid #0088ff;
+    border-radius: 15px;
+    text-align: center;
+    color: white;
+    width: 300px;
+}
+
+.stars-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.star {
+    font-size: 40px;
+    color: #333; /* Մութ աստղ */
+    transition: color 0.3s;
+}
+
+.modal-button {
+    background: #0088ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+}
+
+.close-modal-btn {
+    background: transparent;
+    border: none;
+    color: gray;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+/* Մոդալի ընդհանուր վիճակը */
+.modal {
+    display: none; 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background: rgba(0,0,0,0.8); 
+    z-index: 1000; 
+    align-items: center; 
+    justify-content: center;
+}
+
+/* Մոդալի պատուհանը */
+.modal-content {
+    background: #070b19; 
+    padding: 30px; 
+    border: 1px solid #0088ff; 
+    border-radius: 15px; 
+    text-align: center; 
+    color: white; 
+    width: 300px;
+}
+
+/* Զառի տեսքը */
+#dice-result {
+    font-size: 50px; 
+    margin: 20px 0;
+}
+
+/* Կոճակները */
+.modal-button {
+    background: #0088ff; 
+    color: white; 
+    border: none; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+}
+
+.modal-button:hover {
+    background: #0066cc;
+}
+
+.close-btn {
+    background: transparent; 
+    border: none; 
+    color: gray; 
+    margin-top: 15px; 
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: white;
+}
+
+#profile-balance {
+    color: #00ffcc !important; /* Նեոն կապույտ-կանաչ գույն */
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border: 1px solid #00ffcc;
+    border-radius: 4px;
+    background: rgba(0, 255, 204, 0.1);
+}

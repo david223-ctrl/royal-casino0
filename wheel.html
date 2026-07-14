@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Casino - Колесо Фортуны</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="wheel.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo">
+            <i class="fa-solid fa-dice"></i>
+            <h1>Royal <span>Casino</span></h1>
+        </div>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="games.html">Игры</a>
+            <a href="wheel.html" class="active">Колесо</a>
+            <a href="vip.html">VIP</a>
+            <a href="contacts.html">Контакты</a>
+        </nav>
+        
+        <div class="buttons" id="auth-buttons">
+            <button class="login" onclick="openModal('login-modal')">Войти</button>
+            <button class="signup" onclick="openModal('register-modal')">Регистрация</button>
+        </div>
+
+        <div class="buttons" id="user-profile" style="display: none; align-items: center; gap: 10px;">
+            <span style="font-size: 16px; color: #fff;">👤</span>
+            <span id="profile-username" style="color: #fff; font-weight: bold;"></span>
+            <span id="profile-balance" style="color: #00ffcc; font-weight: bold; background: rgba(0,255,204,0.1); padding: 3px 8px; border-radius: 4px; border: 1px solid #00ffcc;">0 $</span>
+            <button id="logout-btn" style="background: #ff4d4d; color: white; border: none; padding: 5px 10px; cursor: pointer; border-radius: 4px;">Выйти</button>
+        </div>
+    </header>
+
+    <main class="wheel-page-container">
+        <h2 class="wheel-title">Колесо Фортуны</h2>
+        <p class="wheel-subtitle">Стоимость одного вращения: <span style="color:#00ffcc; font-weight:bold;">100 $</span></p>
+
+        <div class="wheel-area">
+            <div class="pointer"></div>
+            <div class="wheel-wrapper" id="wheel">
+                <div class="wheel-center"></div>
+                <div class="wheel-number" style="transform: rotate(0deg);">200$</div>
+                <div class="wheel-number" style="transform: rotate(45deg);">0$</div>
+                <div class="wheel-number" style="transform: rotate(90deg);">500$</div>
+                <div class="wheel-number" style="transform: rotate(135deg);">50$</div>
+                <div class="wheel-number" style="transform: rotate(180deg);">1000$</div>
+                <div class="wheel-number" style="transform: rotate(225deg);">0$</div>
+                <div class="wheel-number" style="transform: rotate(270deg);">300$</div>
+                <div class="wheel-number" style="transform: rotate(315deg);">100$</div>
+            </div>
+        </div>
+
+        <button class="spin-btn" id="spin-button">Испытать удачу</button>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

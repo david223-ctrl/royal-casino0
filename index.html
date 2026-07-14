@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Casino</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">
+            <i class="fa-solid fa-dice"></i>
+            <span>Royal Casino</span>
+        </div>
+
+        <nav>
+            <a href="#">Главная</a>
+            <a href="./games.html">Игры</a>
+            <a href="#">Бонусы</a>
+            <a href="./vip.html">VIP</a>
+            <a href="./contacts.html">Контакты</a>
+            <a href="wheel.html">Колесо Фортуны</a>
+        </nav>
+
+        <div class="buttons" id="auth-buttons">
+            <button class="login" onclick="openModal('login-modal')">Войти</button>
+            <button class="signup" onclick="openModal('register-modal')">Регистрация</button>
+        </div>
+        
+        <div class="buttons" id="user-profile" style="display: none; align-items: center; gap: 10px;">
+            <span style="font-size: 18px; color: #fff;">👤</span>
+            <span id="profile-username" style="color: #fff; font-weight: bold;"></span>
+            <button id="logout-btn" style="background: #ff4d4d; color: white; border: none; padding: 5px 10px; cursor: pointer; border-radius: 4px;">Выйти</button>
+        </div>
+        
+        <div class="buttons" id="user-profile" style="display: none; align-items: center; gap: 10px;">
+            <span id="profile-username" style="color: white; font-weight: bold;"></span>
+            <span id="profile-balance" style="color: #00ffcc; font-weight: bold;">0 $</span>
+            <button id="logout-btn" style="background: red; color: white; border: none; padding: 5px 10px; cursor: pointer;">Выйти</button>
+        </div>
+
+    </header>
+
+    <section class="hero">
+
+        <div class="hero-left">
+
+            <h4>Добро пожаловать</h4>
+
+            <h1>Играй.<br>Побеждай.<br>Получай бонусы.</h1>
+
+            <p>
+                Современная игровая платформа
+                с быстрыми выплатами,
+                турнирами и эксклюзивными акциями.
+            </p>
+
+            <div class="hero-buttons">
+
+                <button class="play">
+                    Начать играть
+                </button>
+
+                <button class="bonus">
+                    Получить бонус
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="hero-right">
+
+            <div class="roulette-glow"></div>
+
+            <div class="roulette">
+
+                <i class="fa-solid fa-dice"></i>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="games main-page-games">
+        <div class="section-header">
+            <h1>Популярные игры</h1>
+            <a href="games.html" class="see-all-btn">Смотреть все</a>
+        </div>
+
+        <div class="game-grid">
+            <div class="game-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU2E1s9oB-W5qf-Ei1w77ReMeMobQKJDvkXm94BZqqwd_J3tDPNq9RfBA&s=10" alt="Lucky Stars">
+                <h3>Lucky Stars</h3>
+                <button onclick="window.location.href='games.html'">Подробнее</button>
+            </div>
+
+            <div class="game-card">
+                <img src="https://play-lh.googleusercontent.com/m7dMDRIOhisSDL2xdPpff0hyjHuvcP0PVvv1ln_DovhD0f0_GLbvuMxl0asV_r4ueOgO_UbfXjYPk-3cBjFU3w=w240-h480-rw" alt="Golden Spin">
+                <h3>Golden Spin</h3>
+                <button onclick="window.location.href='games.html'">Подробнее</button>
+            </div>
+
+            <div class="game-card">
+                <img src="https://fruityslots.com/wp-content/uploads/2022/11/Blue-Fortune-Slot-Logo-1.png" alt="Blue Fortune">
+                <h3>Blue Fortune</h3>
+                <button onclick="window.location.href='games.html'">Подробнее</button>
+            </div>
+
+            <div class="game-card">
+                <img src="https://stakelogic.com/wp-content/uploads/2022/08/magic-wheel.png" alt="Magic Wheel">
+                <h3>Magic Wheel</h3>
+                <button onclick="window.location.href='games.html'">Подробнее</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="jackpot-section">
+        <div class="jackpot-container">
+            <h2>MEGA JACKPOT</h2>
+            <div class="jackpot-amount">$ 2,845,931.<span class="cents">45</span></div>
+            <p>Испытай свою удачу прямо сейчас!</p>
+        </div>
+    </section>
+
+    <section class="features-section">
+        <div class="features-container">
+            <h2 class="section-title">Наши преимущества</h2>
+            <div class="features-grid">
+                
+                <div class="feature-card">
+                    <i class="fa-solid fa-bolt"></i>
+                    <h3>Быстрые выплаты</h3>
+                    <p>Вывод средств на любые платежные системы в течение 10 минут.</p>
+                </div>
+
+                <div class="feature-card">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <h3>Полная безопасность</h3>
+                    <p>Надежное шифрование данных и гарантированная честность игр.</p>
+                </div>
+
+                <div class="feature-card">
+                    <i class="fa-solid fa-gift"></i>
+                    <h3>Щедрые бонусы</h3>
+                    <p>Кэшбек каждую неделю и фриспины при регистрации всем новичкам.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <div class="faq-container">
+            <h2 class="section-title">Часто задаваемые вопросы</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">Как начать играть?</div>
+                <div class="faq-answer">Просто нажмите кнопку «Регистрация» в шапке сайта, создайте аккаунт за 1 минуту и выберите любую игру из каталога.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Безопасны ли мои данные?</div>
+                <div class="faq-answer">Да, мы используем современные протоколы сквозного SSL-шифрования, чтобы гарантировать безопасность ваших средств и личной информации.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Как получить бонус?</div>
+                <div class="faq-answer">Перейдите во вкладку «Бонусы» или нажмите кнопку «Получить бонус» на главном баннере, чтобы активировать приветственный пакет.</div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Royal Casino. Все права защищены. Играйте ответственно.</p>
+        </div>
+    </footer>
+
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('login-modal')">&times;</span>
+            <h2>Вход в аккаунт</h2>
+            <form onsubmit="event.preventDefault(); alert('Вход выполнен!'); closeModal('login-modal');">
+                <div class="input-group">
+                    <label>E-mail или Логин</label>
+                    <input type="text" placeholder="Введите ваш email" required>
+                </div>
+                <div class="input-group">
+                    <label>Пароль</label>
+                    <input type="password" placeholder="Введите пароль" required>
+                </div>
+                <button type="submit" class="modal-submit-btn">Войти</button>
+            </form>
+            <p class="modal-switch">Нет аккаунта? <a href="#" onclick="switchModal('login-modal', 'register-modal')">Зарегистрироваться</a></p>
+        </div>
+    </div>
+
+    <div id="register-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('register-modal')">&times;</span>
+            <h2>Регистрация</h2>
+            <form onsubmit="event.preventDefault(); alert('Регистрация успешна!'); closeModal('register-modal');">
+                <div class="input-group">
+                    <label>Имя пользователя</label>
+                    <input type="text" placeholder="Придумайте логин" required>
+                </div>
+                <div class="input-group">
+                    <label>E-mail</label>
+                    <input type="email" placeholder="example@mail.com" required>
+                </div>
+                <div class="input-group">
+                    <label>Пароль</label>
+                    <input type="password" placeholder="Придумайте сложный пароль" required>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="terms" required>
+                    <label for="terms">Мне исполнилось 18 лет, и я принимаю правила</label>
+                </div>
+                <button type="submit" class="modal-submit-btn">Создать аккаунт</button>
+            </form>
+            <p class="modal-switch">Уже есть аккаунт? <a href="#" onclick="switchModal('register-modal', 'login-modal')">Войти</a></p>
+        </div>
+    </div>
+
+   
+    <script src="script.js"></script>
+
+   
+</body>
+
+</html>
