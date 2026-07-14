@@ -1523,3 +1523,43 @@ margin-top:40px;
     border-radius: 4px;
     background: rgba(0, 255, 204, 0.1);
 }
+
+/* --- ԱԴԱՊՏԻՎ ԴԻԶԱՅՆ (RESPONSIVE) --- */
+
+/* Մենյուի ադապտացիա */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px !important;
+    }
+    .user-profile {
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+/* Խաղերի ցանցի (grid) ադապտացիա */
+@media (max-width: 1024px) {
+    .game-grid {
+        grid-template-columns: repeat(2, 1fr) !important; /* 2 սյուն պլանշետների համար */
+    }
+}
+
+@media (max-width: 600px) {
+    .game-grid {
+        grid-template-columns: 1fr !important; /* 1 սյուն հեռախոսների համար */
+    }
+    
+    /* Քարտերի չափերը հեռախոսով */
+    .game-card {
+        margin: 0 auto;
+        width: 90%;
+    }
+}
+
+/* Ընդհանուր նկարների հարմարեցում */
+img {
+    max-width: 100%;
+    height: auto;
+}
